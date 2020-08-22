@@ -1,0 +1,302 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="products.css">
+  <script type="text/javascript" src="products.js"></script>
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <title> Beas Gardening </title>
+</head>
+
+<body>
+    <div class="topContainer">
+        <header>
+            <img id="logo" src="Lab 4 assets/Beas-gardening-logo1.png" alt="LOGO">
+        </header>
+        <div class="mobileMenu">
+            <img class="buttons" id="button1" src="Lab 4 assets/hamburgerbutton.png" alt="Menu" onclick="OpenNav()">
+            <img class="buttons" id="button2" src="Lab 4 assets/closebutton.png"  alt="Close Menu" onclick="CloseNav()">
+            <img class="buttons" id="mobileSearch" src="Lab 4 assets/search.png" alt="Search..." onclick="SearchBar()">
+            <img class="buttons" id="mobileCart" src="Lab 4 assets/Cart-icon1.png" alt="Your Cart">
+        </div>
+    <nav id="topNav">
+        <ul>
+            <li><a class="options" href="lab4.html">Home</a></li>
+            <li><a class="options" href="#about">About</a></li>
+            <li><a class="options" href="#tips">Tips</a></li>
+            <li id="productss"><a class="options" href="products.html">Products</a></li>
+            <li><input type="text" placeholder="Search..."></li>
+            <div id="cart"><li><a href="#cart"><img src="Lab 4 assets/Cart-icon.png" alt="Your Cart"></a></li></div>
+        </ul>
+    </nav>
+</div>
+
+
+    <div class="bottomContainer">
+        <nav>
+            <ul id="sideNav">
+                <li onclick="HideProduct(outdoor)"><a href="#outoor">Outdoor Plants</a></li>
+                <img class="sideDrpO" id="sideDrpO1" src="Lab 4 assets/dropdownopen.png" alt="^" onclick="OpenProductNav(1)">
+                <img class="sideDrpC" id="sideDrpC1" src="Lab 4 assets/dropdown.png" alt="^" onclick="CloseProductNav(1)">
+                    <ul class="productOptions" id="productOption1">
+                        <li><a href="#perennials">Perennials</a></li>
+                        <li><a href="#shrubs">Shrubs</a></li>
+                        <li><a href="#trees">Trees</a></li>
+                        <li class="lastOption" id="chosen"><a href="productframe.html">Vegetables</a></li>
+                    </ul>
+                <li onclick="HideProduct(indoor)"><a href="#indoor">Indoor Plants</a></li>
+                <img class="sideDrpO" id="sideDrpO2" src="Lab 4 assets/dropdownopen.png" alt="^" onclick="OpenProductNav(2)">
+                <img class="sideDrpC" id="sideDrpC2" src="Lab 4 assets/dropdown.png" alt="^" onclick="CloseProductNav(2)">
+                    <ul class="productOptions" id="productOption2">
+                        <li><a href="#moneytrees">Money Trees</a></li>
+                        <li><a href="#fiddle">Fiddle Leaf Figs</a></li>
+                        <li><a href="#orchids">Orchids</a></li>
+                        <li class="lastOption"><a href="#bromeliad">Bromeliads</a></li>
+                    </ul>
+                <li onclick="HideProduct(planters)"><a href="#planters">Planters</a></li>
+                <img class="sideDrpO" id="sideDrpO3" src="Lab 4 assets/dropdownopen.png" alt="^" onclick="OpenProductNav(3)">
+                <img class="sideDrpC" id="sideDrpC3" src="Lab 4 assets/dropdown.png" alt="^" onclick="CloseProductNav(3)">
+                    <ul class="productOptions" id="productOption3">
+                        <li><a href="#pots">Pots</a></li>
+                        <li><a href="#raisedbeds">Raised Beds</a></li>
+                        <li><a href="#elevator">Elevator Plant Beds</a></li>
+                        <li class="lastOption"><a href="#stands">Stands and Trays</a></li>
+                    </ul>
+                <li onclick="HideProduct(supplies)"><a href="#supplies">Supplies</a></li>
+                <img class="sideDrpO" id="sideDrpO4" src="Lab 4 assets/dropdownopen.png" alt="^" onclick="OpenProductNav(4)">
+                <img class="sideDrpC" id="sideDrpC4" src="Lab 4 assets/dropdown.png" alt="^" onclick="CloseProductNav(4)">
+                    <ul class="productOptions" id="productOption4">
+                        <li><a href="#fertilizer">Fertilizer</a></li>
+                        <li><a href="#soils">Soils</a></li>
+                        <li><a href="#tools">Tools</a></li>
+                        <li class="lastOption"><a href="#seeds">Seeds</a></li>
+                    </ul>
+                <li onclick="HideProduct(sale)"><a href="#sale">Sale</a></li>
+                <img class="sideDrpO" id="sideDrpO5" src="Lab 4 assets/dropdownopen.png" alt="^" onclick="OpenProductNav(5)">
+                <img class="sideDrpC" id="sideDrpC5" src="Lab 4 assets/dropdown.png" alt="^" onclick="CloseProductNav(5)">
+                    <ul class="productOptions" id="productOption5">
+                        <li><a href="#outdoorsale">Outdoor Plants</a></li>
+                        <li><a href="#indoorsale">Indoor Plants</a></li>
+                        <li><a href="#planterssale">Planters</a></li>
+                        <li class="lastOption"><a href="#suppliessale">Supplies</a></li>
+                    </ul>
+            </ul>
+        </nav>
+        <div id="visualProducts">
+            <h2>Products</h2>
+            <div class="productRows" id="outdoor">
+                <h3>Outdoor Plants</h3>
+                <div class="drpdwn">
+                    <button class="drpBtn">Outdoor Plants <img src="Lab 4 assets/dropdown.png" alt="^"></button>
+                    <div class="drpdwnContent">
+                        <a href="#outoor" onclick="HideProduct(outdoor)">Outdoor Plants</a>
+                        <a href="#indoor" onclick="HideProduct(indoor)">Indoor Plants</a>
+                        <a href="#planters" onclick="HideProduct(planters)">Planters</a>
+                        <a href="#supplies" onclick="HideProduct(supplies)">Supplies</a>
+                        <a href="#sale" onclick="HideProduct(sale)">Sale</a>
+                    </div>
+                </div>
+                    <div class="productType">
+                        <a href="#perennials">
+                            <h4>Perennials</h4>
+                            <img src="Lab 4 assets/outdoorplants/perennials.png" alt="Perennials">
+                        </a>
+                        <a href="#shrubs">
+                            <h4>Shrubs</h4>
+                            <img src="Lab 4 assets/outdoorplants/shrubs.png" alt="Shrubs">
+                        </a>
+                        <a href="#trees">
+                            <h4>Trees</h4>
+                            <img src="Lab 4 assets/outdoorplants/trees.png" alt="Trees">
+                        </a>
+                        <a href="productframe.html">
+                            <h4>Vegetables</h4>
+                            <img src="Lab 4 assets/outdoorplants/vegetables.png" alt="Vegetables">
+                        </a>
+                    </div>
+            </div>
+            <div class="productRows" id="indoor">
+                <h3>Indoor Plants</h3>
+                <div class="drpdwn">
+                    <button class="drpBtn">Indoor Plants <img src="Lab 4 assets/dropdown.png" alt="^"></button>
+                    <div class="drpdwnContent">
+                        <a href="#outoor" onclick="HideProduct(outdoor)">Outdoor Plants</a>
+                        <a href="#indoor" onclick="HideProduct(indoor)">Indoor Plants</a>
+                        <a href="#planters" onclick="HideProduct(planters)">Planters</a>
+                        <a href="#supplies" onclick="HideProduct(supplies)">Supplies</a>
+                        <a href="#sale" onclick="HideProduct(sale)">Sale</a>
+                    </div>
+                </div>
+                    <div class="productType">
+                        <a href="#moneytrees">
+                            <h4>Money Trees</h4>
+                            <img src="Lab 4 assets/indoor/moneytree.png" alt="Money Tree">
+                        </a>
+                        <a href="#fiddle">
+                            <h4>Fiddle Leaf Figs</h4>
+                            <img src="Lab 4 assets/indoor/fiddleleaffig.png" alt="Fiddle Leaf Fig">
+                        </a>
+                        <a href="#orchids">
+                            <h4>Bromeliads</h4>
+                            <img src="Lab 4 assets/indoor/bromeliad.png" alt="Bromeliad">
+                        </a>
+                        <a href="#bromeliad">
+                            <h4>Orchids</h4>
+                            <img src="Lab 4 assets/indoor/orchid.png" alt="Orchid">
+                        </a>
+                    </div>
+            </div>
+            <div class="productRows" id="planters">
+                <h3>Planters</h3>
+                <div class="drpdwn">
+                    <button class="drpBtn">Planters <img src="Lab 4 assets/dropdown.png" alt="^"></button>
+                    <div class="drpdwnContent">
+                        <a href="#outoor" onclick="HideProduct(outdoor)">Outdoor Plants</a>
+                        <a href="#indoor" onclick="HideProduct(indoor)">Indoor Plants</a>
+                        <a href="#planters" onclick="HideProduct(planters)">Planters</a>
+                        <a href="#supplies" onclick="HideProduct(supplies)">Supplies</a>
+                        <a href="#sale" onclick="HideProduct(sale)">Sale</a>
+                    </div>
+                </div>
+                    <div class="productType">
+                        <a href="#pots">
+                            <h4>Pots</h4>
+                            <img src="Lab 4 assets/planters/pots.png" alt="Terra Cotta Pots">
+                        </a>
+                        <a href="#raisedbeds">
+                            <h4>Raised Beds</h4>
+                            <img src="Lab 4 assets/planters/raised.png" alt="Raised Beds">
+                        </a>
+                        <a href="#elevator">
+                            <h4>Elevator Plant Beds</h4>
+                            <img src="Lab 4 assets/planters/elevator.png" alt="Elevator Plant Beds">
+                        </a>
+                        <a href="#stands">
+                            <h4>Stands and Trays</h4>
+                            <img src="Lab 4 assets/planters/stands.png" alt="Stands">
+                        </a>
+                    </div>
+            </div>
+            <div class="productRows" id="supplies">
+                <h3>Supplies</h3>
+                <div class="drpdwn">
+                    <button class="drpBtn">Supplies <img src="Lab 4 assets/dropdown.png" alt="^"></button>
+                    <div class="drpdwnContent">
+                        <a href="#outoor" onclick="HideProduct(outdoor)">Outdoor Plants</a>
+                        <a href="#indoor" onclick="HideProduct(indoor)">Indoor Plants</a>
+                        <a href="#planters" onclick="HideProduct(planters)">Planters</a>
+                        <a href="#supplies" onclick="HideProduct(supplies)">Supplies</a>
+                        <a href="#sale" onclick="HideProduct(sale)">Sale</a>
+                    </div>
+                </div>
+                    <div class="productType">
+                        <a href="#fertilizer">
+                            <h4>Fertilizer</h4>
+                            <img src="Lab 4 assets/supplies/fertilizer.png" alt="Fertilizer Sprouts">
+                        </a>
+                        <a href="#soils">
+                            <h4>Soils</h4>
+                            <img src="Lab 4 assets/supplies/soil.png" alt="Soils">
+                        </a>
+                        <a href="#tools">
+                            <h4>Tools</h4>
+                            <img src="Lab 4 assets/supplies/tools.png" alt="Colorful Tools">
+                        </a>
+                        <a href="#seeds">
+                            <h4>Seeds</h4>
+                            <img src="Lab 4 assets/supplies/seeds.png" alt="Seeds">
+                        </a>
+                    </div>
+            </div>
+            <div class="productRows" id="sale">
+                <h3>Sale</h3>
+                <div class="drpdwn">
+                    <button class="drpBtn">Sale <img src="Lab 4 assets/dropdown.png" alt="^"></button>
+                    <div class="drpdwnContent">
+                        <a href="#outoor" onclick="HideProduct(outdoor)">Outdoor Plants</a>
+                        <a href="#indoor" onclick="HideProduct(indoor)">Indoor Plants</a>
+                        <a href="#planters" onclick="HideProduct(planters)">Planters</a>
+                        <a href="#supplies" onclick="HideProduct(supplies)">Supplies</a>
+                        <a href="#sale" onclick="HideProduct(sale)">Sale</a>
+                    </div>
+                </div>
+                    <div class="productType">
+                        <a href="#outdoorsale">
+                            <h4>Outdoor Plants</h4>
+                            <img src="Lab 4 assets/outdoorplants/trees.png" alt="Fertilizer Sprouts">
+                        </a>
+                        <a href="#indoorsale">
+                            <h4>Indoor Plants</h4>
+                            <img src="Lab 4 assets/indoor/moneytree.png" alt="Moneytree">
+                        </a>
+                        <a href="#planterssale">
+                            <h4>Planters</h4>
+                            <img src="Lab 4 assets/planters/stands.png" alt="Stands">
+                        </a>
+                        <a href="#suppliessale">
+                            <h4>Supplies</h4>
+                            <img src="Lab 4 assets/supplies/seeds.png" alt="Seeds">
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <nav class="bottomNav">
+				<ul>
+                  <div></div>
+                  <div>
+                      <li><a id="home" href="#lab4.html">Home</a></li>
+                      <img id="bea" src="Lab 4 assets/Bea-Adams.png" alt="Bea-Adams">
+                  </div>
+                  <div>
+                      <li class="miniLists"><a c href="#about">About</a>
+                        <ul>
+                            <li><a href="background">Who are we</a></li>
+                            <li><a href="mission">Mission</a></li>
+                            <li><a href="more">More Information</a></li>
+                        </ul>
+                    </li>
+                  </div>
+                  <div>
+                    <li class="miniLists"><a href="#tips">Tips</a>
+                        <ul>
+                            <li><a href="beginner">Beginner's Guide</a></li>
+                            <li><a href="vegetable">Vegetable Tips</a></li>
+                            <li><a href="floral">Flower Tips</a></li>
+                            <li><a href="seasonguide">Seasonal Guides</a></li>
+                        </ul>
+                    </li>
+                  </div>
+                  <div>
+                    <li class="miniLists"><a href="#help">Help</a>
+                        <ul>
+                            <li><a href="orders">Orders and Tracking</a></li>
+                            <li><a href="mission">Returns</a></li>
+                            <li><a href="FAQ">FAQs</a></li>
+                        </ul>
+                    </li>
+                  </div>
+                  <div>
+                    <li class="miniLists"><a href="#contactus">Contact Us</a>
+                        <ul>
+                            <li><a href="info">Information info</a></li>
+                            <li><a href="careers">Careers</a></li>
+                            <li><a href="FAQ">Social Media</a></li>
+                        </ul>
+                    </li>
+                  </div>
+				</ul>
+			</nav>
+        </footer>
+    </div>
+    <script type="text/javascript" src="lab4.js"></script>
+</body>
+</html>

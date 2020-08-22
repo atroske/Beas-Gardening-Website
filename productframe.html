@@ -1,0 +1,359 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="frame.css">
+  <script type="text/javascript" src="frame.js"></script>
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <title> Beas Gardening </title>
+</head>
+
+<body>
+    <div class="topContainer">
+        <header>
+            <img id="logo" src="Lab 4 assets/Beas-gardening-logo1.png" alt="LOGO">
+        </header>
+        <div class="mobileMenu">
+            <img class="buttons" id="button1" src="Lab 4 assets/hamburgerbutton.png" alt="Menu" onclick="OpenNav()">
+            <img class="buttons" id="button2" src="Lab 4 assets/closebutton.png"  alt="Close Menu" onclick="CloseNav()">
+            <img class="buttons" id="mobileSearch" src="Lab 4 assets/search.png" alt="Search..." onclick="SearchBar()">
+            <img class="buttons" id="mobileCart" src="Lab 4 assets/Cart-icon1.png" alt="Your Cart">
+        </div>
+        <nav id="topNav">
+            <ul>
+               <li><a class="options" href="lab4.html">Home</a></li>
+               <li><a class="options" href="#about">About</a></li>
+               <li><a class="options" href="#tips">Tips</a></li>
+               <li id="productss"><a class="options" href="products.html">Products</a></li>
+               <li><input type="text" placeholder="Search..."></li>
+               <div id="cart"><li><a href="#cart"><img src="Lab 4 assets/Cart-icon.png" alt="Your Cart"></a></li></div>
+            </ul>
+         </nav>
+    </div>
+
+    <div class="bottomContainer">
+        <nav>
+            <ul id="sideNav">
+                <li><a href="products.html">Outdoor Plants</a></li>
+                <img class="sideDrpO" id="sideDrpO1" src="Lab 4 assets/dropdownopen.png" alt="^" onclick="OpenProductNav(1)">
+                <img class="sideDrpC" id="sideDrpC1" src="Lab 4 assets/dropdown.png" alt="^" onclick="CloseProductNav(1)">
+                    <ul class="productOptions" id="productOption1">
+                        <li><a href="#perennials">Perennials</a></li>
+                        <li><a href="#shrubs">Shrubs</a></li>
+                        <li><a href="#trees">Trees</a></li>
+                        <li class="lastOption" id="chosen"><a href="productframe.html">Vegetables</a></li>
+                    </ul>
+                <li><a href="products.html#indoor">Indoor Plants</a></li>
+                <img class="sideDrpO" id="sideDrpO2" src="Lab 4 assets/dropdownopen.png" alt="^" onclick="OpenProductNav(2)">
+                <img class="sideDrpC" id="sideDrpC2" src="Lab 4 assets/dropdown.png" alt="^" onclick="CloseProductNav(2)">
+                    <ul class="productOptions" id="productOption2">
+                        <li><a href="#moneytrees">Money Trees</a></li>
+                        <li><a href="#fiddle">Fiddle Leaf Figs</a></li>
+                        <li><a href="#orchids">Orchids</a></li>
+                        <li class="lastOption"><a href="#bromeliad">Bromeliads</a></li>
+                    </ul>
+                <li><a href="products.html#planters">Planters</a></li>
+                <img class="sideDrpO" id="sideDrpO3" src="Lab 4 assets/dropdownopen.png" alt="^" onclick="OpenProductNav(3)">
+                <img class="sideDrpC" id="sideDrpC3" src="Lab 4 assets/dropdown.png" alt="^" onclick="CloseProductNav(3)">
+                    <ul class="productOptions" id="productOption3">
+                        <li><a href="#pots">Pots</a></li>
+                        <li><a href="#raisedbeds">Raised Beds</a></li>
+                        <li><a href="#elevator">Elevator Plant Beds</a></li>
+                        <li class="lastOption"><a href="#stands">Stands and Trays</a></li>
+                    </ul>
+                <li><a href="products.html#supplies">Supplies</a></li>
+                <img class="sideDrpO" id="sideDrpO4" src="Lab 4 assets/dropdownopen.png" alt="^" onclick="OpenProductNav(4)">
+                <img class="sideDrpC" id="sideDrpC4" src="Lab 4 assets/dropdown.png" alt="^" onclick="CloseProductNav(4)">
+                    <ul class="productOptions" id="productOption4">
+                        <li><a href="#fertilizer">Fertilizer</a></li>
+                        <li><a href="#soils">Soils</a></li>
+                        <li><a href="#tools">Tools</a></li>
+                        <li class="lastOption"><a href="#seeds">Seeds</a></li>
+                    </ul>
+                <li><a href="products.html#sale">Sale</a></li>
+                <img class="sideDrpO" id="sideDrpO5" src="Lab 4 assets/dropdownopen.png" alt="^" onclick="OpenProductNav(5)">
+                <img class="sideDrpC" id="sideDrpC5" src="Lab 4 assets/dropdown.png" alt="^" onclick="CloseProductNav(5)">
+                    <ul class="productOptions" id="productOption5">
+                        <li><a href="#outdoorsale">Outdoor Plants</a></li>
+                        <li><a href="#indoorsale">Indoor Plants</a></li>
+                        <li><a href="#planterssale">Planters</a></li>
+                        <li class="lastOption"><a href="#suppliessale">Supplies</a></li>
+                    </ul>
+            </ul>
+        </nav>
+        <div id="visualProducts">
+            <div id="breadCrumb">
+                <h2>Products</h2><p> / outdoor / vegetables</p>
+            </div>
+            <div class="drpdwn">
+                <button class="drpBtn">Products<img src="Lab 4 assets/dropdown.png" alt="^"></button>
+                <div class="drpdwnContent">
+                    <a href="#outoor" onclick="location.href='products.html#outdoor'">Outdoor Plants</a>
+                    <a href="#indoor" onclick="location.href='products.html#indoor'">Indoor Plants</a>
+                    <a href="#planters" onclick="location.href='products.html#planters'">Planters</a>
+                    <a href="#supplies" onclick="location.href='products.html#supplies'">Supplies</a>
+                    <a href="#sale" onclick="location.href='products.html#sale'">Sale</a>
+                </div>
+            </div>
+            <div class="basicInfo">
+                <div class="topLine">
+                    <h2>Vegetables</h2>
+                    <button id="backProducts" onclick="location.href='products.html'"> Back to Products</button>
+                </div>
+                <div id="vegIntro">
+                    <img src="Lab 4 assets/vegetables/cucumber.png" alt="cucumber">
+                    <div id="topicContent">
+                        <p> The top 4 things to remember for a successful vegetable garden are:</p>
+                        <ul id="topicTips">
+                          <li>1. Choose a sunny location. Most vegetables need at least 6–8 hours of sun. Some leafy greens and root vegetables can take a little shade, but most (tomatoes, peppers, etc.) need full sun. </li>
+                          <li>2. Prepare the soil well. Thoroughly remove all weeds, dig to loosen the soil, and amend with compost and fertilizer as needed. </li>
+                          <li>3. Plant vegetables at the right time. See our Vegetable Planting Chart to choose the right vegetables for the time and season. </li>
+                          <li>4. Keep vegetables well watered. Seedlings may need extra to get established. Don't overwater, but be sure give them enough so they grow well and are productive.</li>
+                          <li id="navbuttons"> 
+                                <button onclick="location.href='#vegWarm'">Warm Vegetables</button>
+                                <button onclick="location.href='#vegCool'">Cool Vegetables</button>
+                                <button onclick="location.href='http://mgsantaclara.ucanr.edu/garden-help/vegetables/'">Learn More @ UC Gardens</button>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="vegClass" id="vegWarm">
+                <div class="subIntro">
+                    <h3>Warm Season Vegetables</h3>
+                    <img id="pageUp" src="Lab 4 assets/pageup.png" onclick="location.href='#visualProducts'">
+                    <p>These are vegetables that grow best in the summer (April–September) and generally can't tolerate temperatures below about 50°F. Perennial vegetables that produce in the summer are included here.</p>
+                </div>
+                <div class="veggieTypes">
+                    <div class="oneVeg">
+                        <a href="#asparagus"><h4>Asparagus</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/Asparagus.jpg" alt="asparagus">
+                        <div class="add2cart" onclick=AddtoCart(asparagus)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg"> 
+                        <a href="#beans"><h4>Beans</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/beans.jpg" alt="beans">
+                        <div class="add2cart" onclick=AddtoCart(beans)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png"alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#cantalope"><h4>Cantalope</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/cantalope.jpg" alt="cantalope">
+                        <div class="add2cart" onclick=AddtoCart(cantalope)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#cucumbers"><h4>Cucumbers</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/cucumber.png" alt="cucumber">
+                        <div class="add2cart" onclick=AddtoCart(cucumber)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#dill"><h4>Dill</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/filler.png" alt="fillerimg">
+                        <div class="add2cart" onclick=AddtoCart(dill)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#eggplant"><h4>Eggplant</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/filler.png" alt="fillerimg">
+                        <div class="add2cart" onclick=AddtoCart(eggplant)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#parsley"><h4>Parsley</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/filler.png" alt="fillerimg">
+                        <div class="add2cart" onclick=AddtoCart(parsley)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#potatoes"><h4>Potatoes</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/filler.png" alt="fillerimg">
+                        <div class="add2cart" onclick=AddtoCart(potatoes)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#summersquash"><h4>Summer Squash</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/filler.png" alt="fillerimg">
+                        <div class="add2cart" onclick=AddtoCart(sumsquash)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#tomatoes"><h4>Tomatoes</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/filler.png" alt="fillerimg">
+                        <div class="add2cart" onclick=AddtoCart(tomatoes)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#zucchini"><h4>Zucchini</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/filler.png" alt="fillerimg">
+                        <div class="add2cart" onclick=AddtoCart(zucchini)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vegClass" id="vegCool">
+                <div class="subIntro">
+                    <h3>Cool Season Vegetables</h3>
+                    <img id="pageUp" src="Lab 4 assets/pageup.png" onclick="location.href='#visualProducts'">
+                    <p>These are vegetables that grow best in the fall, winter, and early spring (September–April). Some of these can be grown in the summer as well, with some care.</p>
+                </div>
+                <div class="veggieTypes">
+                    <div class="oneVeg">
+                        <a href="#artichoke"><h4>Artichoke</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/artichoke.jpg" alt="Artichoke">
+                        <div class="add2cart" onclick=AddtoCart(artichoke)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg"> 
+                        <a href="#broccoli"><h4>Broccoli</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/broccoli.jpg" alt="broccoli">
+                        <div class="add2cart" onclick=AddtoCart(broccoli)> 
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png"alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#carrots"><h4>Carrots</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/filler.png" alt="carrot">
+                        <div class="add2cart" onclick=AddtoCart(carrot)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#cauliflower"><h4>Cauliflower</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/cauliflower.jpg" alt="cauliflower">
+                        <div class="add2cart" onclick=AddtoCart(cauliflower)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#celery"><h4>Celery</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/filler.png" alt="fillerimg">
+                        <div class="add2cart" onclick=AddtoCart(celery)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#kale"><h4>Kale</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/filler.png" alt="fillerimg">
+                        <div class="add2cart" onclick=AddtoCart(kale)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#leeks"><h4>Leeks</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/filler.png" alt="fillerimg">
+                        <div class="add2cart" onclick=AddtoCart(leeks)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#onions"><h4>Onions</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/filler.png" alt="fillerimg">
+                        <div class="add2cart" onclick=AddtoCart(onions)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                    <div class="oneVeg">
+                        <a href="#spinach"><h4>Spinach</h4></a>
+                        <img class="prodImg" src="Lab 4 assets/vegetables/filler.png" alt="fillerimg">
+                        <div class="add2cart" onclick=AddtoCart(spinach)>
+                            <h4>Add to Cart</h4>
+                            <img class="cartBtn" src="Lab 4 assets/addcart.png" alt="cart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <nav class="bottomNav">
+				<ul>
+                  <div></div>
+                  <div>
+                      <li><a id="home" href="#lab4.html">Home</a></li>
+                      <img id="bea" src="Lab 4 assets/Bea-Adams.png" alt="Bea-Adams">
+                  </div>
+                  <div>
+                      <li class="miniLists"><a c href="#about">About</a>
+                        <ul>
+                            <li><a href="background">Who are we</a></li>
+                            <li><a href="mission">Mission</a></li>
+                            <li><a href="more">More Information</a></li>
+                        </ul>
+                    </li>
+                  </div>
+                  <div>
+                    <li class="miniLists"><a href="#tips">Tips</a>
+                        <ul>
+                            <li><a href="beginner">Beginner's Guide</a></li>
+                            <li><a href="vegetable">Vegetable Tips</a></li>
+                            <li><a href="floral">Flower Tips</a></li>
+                            <li><a href="seasonguide">Seasonal Guides</a></li>
+                        </ul>
+                    </li>
+                  </div>
+                  <div>
+                    <li class="miniLists"><a href="#help">Help</a>
+                        <ul>
+                            <li><a href="orders">Orders and Tracking</a></li>
+                            <li><a href="mission">Returns</a></li>
+                            <li><a href="FAQ">FAQs</a></li>
+                        </ul>
+                    </li>
+                  </div>
+                  <div>
+                    <li class="miniLists"><a href="#contactus">Contact Us</a>
+                        <ul>
+                            <li><a href="info">Information info</a></li>
+                            <li><a href="careers">Careers</a></li>
+                            <li><a href="FAQ">Social Media</a></li>
+                        </ul>
+                    </li>
+                  </div>
+				</ul>
+			</nav>
+        </footer>
+    </div>
+    <script type="text/javascript" src="lab4.js"></script>
+</body>
+</html>
